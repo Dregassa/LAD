@@ -7,18 +7,28 @@ public class Ticket implements Comparable{
     private String _name;
     private String _solution;
 
-    public set
+    //public set
 
     Ticket(String problem, int VIPLevel, String name){
-	
+	_id = 0;
+	_VIPLevel = VIPLevel;
+	_problem = problem;
+	_issolved = false;
+	_name = name;
+	_solution = "";
     }
 
     Ticket(){
-	return;
+	_id = 0;
+	_VIPLevel = 0;
+	_problem = "Problem";
+	_issolved = false;
+	_name = "Name";
+	_solution = "Solution";
     }
 
-    public Boolean compareTo(Ticket other){
-	
+    public int compareTo(Ticket other){
+	return this.
     }
 
 }

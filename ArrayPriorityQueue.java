@@ -8,12 +8,12 @@ HW32 -- Getting Past the Velvet Rope
 
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue<Ticket> implements PriorityQueue{
+public class ArrayPriorityQueue<T> implements PriorityQueue{
 
     
-    private ArrayList<Ticket> _data;
+    private ArrayList<T> _data;
 
-    public void add(Ticket item){
+    public void add(T item){
 	_data.add(item);
     }
 
@@ -21,11 +21,11 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue{
 	return _data.size() == 0;
     }
 
-    public Ticket peekMin(){
+    public T peekMin(){
 
 	if (isEmpty()) return null; 
 	
-	Ticket value = _data.get(0);
+	T value = _data.get(0);
 	for (int k = 1; k < _data.size(); k++){
 	    if (value.compareTo(_data.get(k)) > 0) { //value greater than current object
 		value = _data.get(k);
@@ -35,11 +35,11 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue{
 	return value;
     }
 
-    public Ticket removeMin(){
+    public T removeMin(){
 
 	if (isEmpty()) return null; 
 	
-	Ticket value = _data.get(0);
+	T value = _data.get(0);
 	int index = 0;
 	for (int k = 1; k < _data.size(); k++){
 	    if (value.compareTo(_data.get(k)) > 0) { //value greater than object
@@ -55,7 +55,7 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue{
 
     
     public ArrayPriorityQueue(){
-	_data = new ArrayList<Ticket>();
+	_data = new ArrayList<T>();
     }
 
 /*
