@@ -7,7 +7,43 @@ public class Ticket implements Comparable{
     private String _name;
     private String _solution;
 
-    //public set
+    public int getid(){
+	return _id;
+    }
+    public int getVIPLevel(){
+	return _VIPLevel;
+    }
+    public String getproblem(){
+	return _problem;
+    }
+    public Boolean getisSolved(){
+	return _isSolved;
+    }
+    public String getname(){
+	return _name;
+    }
+    public String getsolution(){
+	return _solution;
+    }
+
+    public void setid(int x){
+	_id = x;
+    }
+    public void setVIPLevel(){
+	_VIPLevel = x;
+    }
+    public void setproblem(x){
+	_problem = x;
+    }
+    public void setisSolved(x){
+	_isSolved = x;
+    }
+    public void setname(x){
+	_name = x;
+    }
+    public void setsolution(x){
+	_solution = x;
+    }
 
     Ticket(String problem, int VIPLevel, String name){
 	_id = 0;
@@ -28,7 +64,7 @@ public class Ticket implements Comparable{
     }
 
     public int compareTo(Ticket other){
-	return this.
+	if(
     }
 
 }
