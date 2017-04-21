@@ -29,19 +29,19 @@ public class Ticket implements Comparable{
     public void setid(int x){
 	_id = x;
     }
-    public void setVIPLevel(){
+    public void setVIPLevel(int x){
 	_VIPLevel = x;
     }
-    public void setproblem(x){
+    public void setproblem(String x){
 	_problem = x;
     }
-    public void setisSolved(x){
+    public void setisSolved(Boolean x){
 	_isSolved = x;
     }
-    public void setname(x){
+    public void setname(String x){
 	_name = x;
     }
-    public void setsolution(x){
+    public void setsolution(String x){
 	_solution = x;
     }
 
