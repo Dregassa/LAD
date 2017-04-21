@@ -8,12 +8,12 @@ HW32 -- Getting Past the Velvet Rope
 
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue implements PriorityQueue{
+public class ArrayPriorityQueue<Ticket> implements PriorityQueue{
 
     
-    private ArrayList<Comparable> _data;
+    private ArrayList<Ticket> _data;
 
-    public void add(Comparable item){
+    public void add(Ticket item){
 	_data.add(item);
     }
 
@@ -21,11 +21,11 @@ public class ArrayPriorityQueue implements PriorityQueue{
 	return _data.size() == 0;
     }
 
-    public Comparable peekMin(){
+    public Ticket peekMin(){
 
 	if (isEmpty()) return null; 
 	
-	Comparable value = _data.get(0);
+	Ticket value = _data.get(0);
 	for (int k = 1; k < _data.size(); k++){
 	    if (value.compareTo(_data.get(k)) > 0) { //value greater than current object
 		value = _data.get(k);
@@ -35,11 +35,11 @@ public class ArrayPriorityQueue implements PriorityQueue{
 	return value;
     }
 
-    public Comparable removeMin(){
+    public Ticket removeMin(){
 
 	if (isEmpty()) return null; 
 	
-	Comparable value = _data.get(0);
+	Ticket value = _data.get(0);
 	int index = 0;
 	for (int k = 1; k < _data.size(); k++){
 	    if (value.compareTo(_data.get(k)) > 0) { //value greater than object
@@ -55,10 +55,10 @@ public class ArrayPriorityQueue implements PriorityQueue{
 
     
     public ArrayPriorityQueue(){
-	_data = new ArrayList<Comparable>();
+	_data = new ArrayList<Ticket>();
     }
 
-
+/*
     public static void main(String[] args){
 
 	ArrayPriorityQueue daniel = new ArrayPriorityQueue();
@@ -91,7 +91,7 @@ public class ArrayPriorityQueue implements PriorityQueue{
 	System.out.println(daniel.removeMin());
 
 	
-	
+*/	
     }
 }
 
