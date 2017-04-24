@@ -64,7 +64,9 @@ public class Ticket implements Comparable{
     }
 
     public int compareTo(Ticket other){
-	if(
+	if (this.getVIPLevel() > other.getVIPLevel() ) return 1;
+	else if (this.getVIPLevel() < other.getVIPLevel() ) return -1;
+	else return 0;
     }
 
 }

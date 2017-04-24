@@ -1,4 +1,4 @@
-public interface PriorityQueue<T>{
+public interface PriorityQueue <T extends Comparable<? super T>>{
 
     //add item to the end of the Queue
     public void add(T item);

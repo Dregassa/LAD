@@ -1,14 +1,6 @@
-/*
-Daniel Regassa
-APCS2 pd5
-HW32 -- Getting Past the Velvet Rope
-2016-04-19
-*/
-
-
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue<T> implements PriorityQueue{
+public class ArrayPriorityQueue<T extends Comparable<? super T>> implements PriorityQueue<T>{
 
     
     private ArrayList<T> _data;
@@ -58,10 +50,10 @@ public class ArrayPriorityQueue<T> implements PriorityQueue{
 	_data = new ArrayList<T>();
     }
 
-/*
+
     public static void main(String[] args){
 
-	ArrayPriorityQueue daniel = new ArrayPriorityQueue();
+	ArrayPriorityQueue daniel = new ArrayPriorityQueue<Integer>();
 
 	System.out.println(daniel.isEmpty());
 	
@@ -91,7 +83,7 @@ public class ArrayPriorityQueue<T> implements PriorityQueue{
 	System.out.println(daniel.removeMin());
 
 	
-*/	
+	
     }
 }
 
