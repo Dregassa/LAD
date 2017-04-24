@@ -7,6 +7,7 @@ public class Ticket implements Comparable{
     private String _name;
     private String _solution;
 
+    //-------------------------------
     public int getid(){
 	return _id;
     }
@@ -25,7 +26,9 @@ public class Ticket implements Comparable{
     public String getsolution(){
 	return _solution;
     }
-
+    //-------------------------------
+	
+    //-------------------------------
     public void setid(int x){
 	_id = x;
     }
@@ -44,25 +47,29 @@ public class Ticket implements Comparable{
     public void setsolution(String x){
 	_solution = x;
     }
-
+    //-------------------------------
+	
+    //overloaded constructor
     Ticket(String problem, int VIPLevel, String name){
 	_id = 0;
 	_VIPLevel = VIPLevel;
 	_problem = problem;
-	_issolved = false;
+	_isSolved = false;
 	_name = name;
 	_solution = "";
     }
 
+    //default constructor
     Ticket(){
 	_id = 0;
 	_VIPLevel = 0;
 	_problem = "Problem";
-	_issolved = false;
+	_isSolved = false;
 	_name = "Name";
 	_solution = "Solution";
     }
 
+    //overwritten compareTo() method
     public int compareTo(Ticket other){
 	if (this.getVIPLevel() > other.getVIPLevel() ) return 1;
 	else if (this.getVIPLevel() < other.getVIPLevel() ) return -1;
